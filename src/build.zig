@@ -7,6 +7,7 @@ pub fn addRaylib(b: *std.Build, target: std.zig.CrossTarget, optimize: std.built
         "-std=gnu99",
         "-D_GNU_SOURCE",
         "-DGL_SILENCE_DEPRECATION=199309L",
+        "-fno-sanitize=undefined",
     };
 
     const raylib = b.addStaticLibrary(.{
